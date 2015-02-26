@@ -272,95 +272,30 @@
     <div class="row">
       <div class="col-md-6" align = "center">
         <h1>Order Online</h1>
+<p><button id="modal_open">Open Email Form</button></p>
 
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-          Order Now
-        </button>
+<div id="modal_wrapper">
+<div id="modal_window">
 
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Close</span></button>
-                <h4 class="modal-title" id="myModalLabel">Order Form</h4>
-              </div>
-              <div class="modal-body">
-                <div class="input-group">
-                 <h4> Name </h4>
-                 <input type="text" class="form-control" placeholder = "Victor Irony">
-               </div>
-               <div class="input-group">
-                 <h4> Address </h4>
-                 <input type="text" class="form-control" placeholder = "Street, City, State, Zip">
-               </div>
-               <div class="input-group">
-                 <h4> Phone Number </h4>
-                 <input type="text" class="form-control" placeholder = "999-999-9999">
-               </div>
-               <div class="input-group">
-                 <h4> Email Address </h4>
-                 <input type="text" class="form-control" placeholder = "email@domain.com">
-               </div>
-               <div class="input-group">
-                 <h4> Order </h4>
-                 <p> Please enter the number corresponding to one of our 78 menu items and the amount of each item you would like to order.
-                   <form action="action_page.php">
-                    Menu Item #1:
-                    <input type="number" name="quantity" min="1" max="78">
-                    Quantity:
-                    <input type="number" name="quantity" min="1" max="10">
-                    <br>
-                    Menu Item #2:
-                    <input type="number" name="quantity" min="1" max="78">
-                    Quantity:
-                    <input type="number" name="quantity" min="1" max="10">
-                    <br>
-                    Menu Item #3:
-                    <input type="number" name="quantity" min="1" max="78">
-                    Quantity:
-                    <input type="number" name="quantity" min="1" max="10">
-                    <br>
-                    Menu Item #4:
-                    <input type="number" name="quantity" min="1" max="78">
-                    Quantity:
-                    <input type="number" name="quantity" min="1" max="10">
-                    <br>
-                    Menu Item #5:
-                    <input type="number" name="quantity" min="1" max="78">
-                    Quantity:
-                    <input type="number" name="quantity" min="1" max="10">
-                  </form>
-                </div>
-                <div class="input-group">
-                  <h4> Estimated Pickup Time </h4>
-                  <input type="text" class="form-control" placeholder = "12:30 PM">
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#thankyou">Place Order</button>
-                </div>
+<div style="text-align: right;"><a id="modal_close" href="#">close <b>X</b></a></div>
 
-                <!-- Order has been received section -->
-                <div class="modal fade" id="thankyou" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Thank you!</h4>
-                      </div>
-                      <div class="modal-body">
-                       <h4>Your order has been received! A representative will contact you with any questions about your order. See you soon! </h4>
-                     </div>
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
+<p>Complete the form below to send an email:</p>
+
+<form id="modal_feedback" method="POST" action="#" accept-charset="UTF-8">
+<p><label>Your Name<strong>*</strong><br>
+<input type="text" autofocus required size="48" name="name" value=""></label></p>
+<p><label>Email Address<strong>*</strong><br>
+<input type="email" required title="Please enter a valid email address" size="48" name="email" value=""></label></p>
+<p><label>Subject<br>
+<input type="text" size="48" name="subject" value=""></label></p>
+<p><label>Enquiry<strong>*</strong><br>
+<textarea required name="message" cols="48" rows="8"></textarea></label></p>
+<p><input type="submit" name="feedbackForm" value="Send Message"></p>
+</form>
+
+</div> <!-- #modal_window -->
+</div> <!-- #modal_wrapper -->
+        
      <div class="col-md-6 clearfix" align = "Center">
       <div class="reservation-widget">
         <form method="get" id="OT_form" action="http://www.toptable.co.uk/restaurant-search.aspx" target="_blank" class="top-table-widget">
@@ -415,17 +350,12 @@
           <br>
 
           <button>Find a Table</button>
-
-          <input type="hidden" name="RestaurantID" id="RestaurantID" value="50392">
-          <input type="hidden" name="rid" id="rid" value="50392">
-          <input type="hidden" name="GeoID" id="GeoID" value="72">
-          <input type="hidden" name="txtDateFormat" id="txtDateFormat" value="dd/mm/yyyy">
-          <input type="hidden" name="RestaurantReferralID" id="RestaurantReferralID" value="50392">
         </form>
         <p>*Note: There is currently no OpenTable reservation option for The House.</p>
       </div>
     </div>
   </div>
+</div>
 </div>
 </section>
 
