@@ -35,39 +35,39 @@ of those sections to manage the look and feel of the site. */
     padding-top: 100px;
     padding-bottom: 50px;
     text-align: center;
-    background: #FF3333;
-    color: yellow;
+    background: #88DBBE;
+    color: #ED0C0C;
 }
 
 .order-section {
     padding-top: 50px;
     padding-bottom: 50px;
-    background: #ffff00;
-    color: red;
+    background: #A57EDE;
+    color: #756709;
 }
 
 .location-section {
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
-    background: #FF3333;
-    color: yellow;
+    background: #88DBBE;
+    color: #ED0C0C;
 }
 
 .social-section {
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
-    background: #ffff00;
-    color:red;
+    background: #A57EDE;
+    color: #756709;
 }
 
 .photos-section {
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
-    background: #FF3333;
-    color:yellow;
+    background: #88DBBE;
+    color: #ED0C0C;
 }
 
 .btn-primary{
