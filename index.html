@@ -1,83 +1,535 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-  <link rel="stylesheet" type="text/css" href="resumecss.css">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Restaurant</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <h1>The House</h1>
-    <h2>Address: 1230 Grand Avenue</h2>
-    <h2>San Francisco, California 94133</h2>
-    <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="Call us at (415) 986-8612 or Email us at thehsesd@outlook.com">
-  Contact Us!
-</button>
-    <div class="links">
-    <h2><a href="http://www.yelp.com/biz/the-house-san-francisco">Check us out on Yelp!</a></h2>
-    <h3>Lunch</h3>
-  <h4>Monday - Saturday</h4>
-<h4>11:30 - 2:30</h4>
+<head>
 
-<h3>Dinner</h3>
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Check out our Dinner Menu!
-</button>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header" hidden="true">
-        <h4 class="modal-title" id="myModalLabel">All prices include tax</h4>
+  <!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+
+  <title> Wong's Wok </title>
+
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
+  <script>
+  function initialize() {
+    var mapProp = {
+      center:new google.maps.LatLng(38.655495,-90.305494),
+      zoom:15,
+      mapTypeId:google.maps.MapTypeId.ROADMAP
+    };
+    var map=new google.maps.Map(document.getElementById("googlemap"),mapProp);
+    var marker=new google.maps.Marker({
+      position:new google.maps.LatLng(38.655495,-90.305494),
+    });
+
+    marker.setMap(map);
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+
+  </script>
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand page-scroll" href="#page-top"><font size="5" color="red">Wong's Wok </font></a>
       </div>
-      <div class="modal-body">
-        <ul>
-        <li>Selected Oysters On The Half Shell with spicy cilantro mignonette--13.00</li>
-        <li>Ahi Tuna Tartare with roasted nori chips--10.00</li>
-        <li>Steamed Mussels with garlic infused shrimp broth--11.00</li>
-        <li>White Shrimp And Chinese Chive Dumplings--9.00</li>
-        <li>Classic Fried Calamari--9.00</li>
-        <li>Maine Crab Cake with pickled ginger remoulade--11.00</li>
-        <li>Deep-Fried Salmon Roll with chinese hot mustard--9.00</li>
-        <li>Blue Lake Bean Tempura with pickled ginger soy--8.00</li>
-        <li>Deep-Fried Chicken Liver with baby greens--8.00</li>
-        <li>Asparagus with roasted sesame dressing--7.00</li>
-        <li>Caesar Salad with crispy scallops--10.00</li>
-        <li>White Shrimp Tempura avocado, baby greens--10.00</li>
-        <li>Charred Baby Octopus Salad crispy pork skin, red chili vinaigrette--10.00</li>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+          <li class="hidden">
+            <a class="page-scroll" href="#page-top"></a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#menu">Menu</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#order">Order or Reserve a Table!</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#location">Location & Contact Information</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#social">Follow Us!</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#photos">Photos!</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#hours"><b>Open: Monday - Saturday 11 am - 9 pm</b></a>
+          </li>
         </ul>
       </div>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <div class="modal-footer" hidden="true">
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
+
+  <!-- Menu Section -->
+  <section id="menu" class="menu-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-g-12">
+          <h1>Menu</h1>
+          <hr>
+          <h3> Appetizers </h3>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 1. Mini Egg Roll (4) </div>
+            <div class="col-md-3"> $2.50 </div>
+            <div class="col-md-3"> 2. Egg Roll </div>
+            <div class="col-md-3"> $1.25 </div>
+            <div class="col-md-3"> 3. Fried Wonton (6) </div>
+            <div class="col-md-3"> $2.50 </div>
+            <div class="col-md-3"> 4. Crab Rangoon (4) </div>
+            <div class="col-md-3"> $2.50 </div>
+            <div class="col-md-3"> 5. Pot Stickers (6) </div>
+            <div class="col-md-3"> $4.25 </div>
+          </div>
+          <hr>
+
+          <h3> Soup </h3>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 6. Egg Drop Soup </div>
+            <div class="col-md-3"> $1.25 </div>
+            <div class="col-md-3"> 7. Wonton Soup </div>
+            <div class="col-md-3"> $1.50 </div>
+            <div class="col-md-3"> 8. Hot & Sour Soup</div>
+            <div class="col-md-3"> $1.50 </div>
+          </div>
+          <hr>
+
+          <h3> Chinese Noodle Soup </h3>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 9. Hot Spicy Beef Noodle Soup</div>
+            <div class="col-md-3"> $7.00 </div>
+            <div class="col-md-3"> 10. Chinese Spaghetti </div>
+            <div class="col-md-3"> $6.75 </div>
+          </div>
+          <hr>
+
+          <h3> Pork </h3>
+          <h4> Small Orders: $5.75 Large Orders: $8.50</h4>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 11. Sweet & Sour Pork </div>
+            <div class="col-md-3"> 12. Pork with Broccoli </div>
+            <div class="col-md-3"> 13. Pork with Mixed Vegetable </div>
+            <div class="col-md-3"> 14. Hot Braised Pork </div>
+          </div>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 15. Twice Pork </div>
+            <div class="col-md-3"> 16. Pork with Garlic Sauce </div>
+            <div class="col-md-3"> 17. Hunan Pork </div>
+            <div class="col-md-3"> 18. Szechuan Pork </div>
+          </div>
+          <hr>
+
+          <h3> Chicken </h3>
+          <h4> Small Orders: $5.75 Large Orders: $8.50</h4>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 19. Sweet & Sour Chicken </div>
+            <div class="col-md-3"> 20. Chicken with Broccoli </div>
+            <div class="col-md-3"> 21. Moo Goo Gai Pan </div>
+            <div class="col-md-3"> 22. Chicken with Snow Peas </div>
+          </div>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 23. Chicken with Cashew Nuts </div>
+            <div class="col-md-3"> 24. Chicken with Mixed Vegetables </div>
+            <div class="col-md-3"> 25. Empress Chicken </div>
+            <div class="col-md-3"> 26. Hot Braised Chicken </div>
+          </div>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 27. Kung Pao Chicken </div>
+            <div class="col-md-3"> 28. Chicken with Garlic Sauce </div>
+            <div class="col-md-3"> 29. Curry Chicken </div>
+            <div class="col-md-3"> 30. Hunan Chicken </div>
+            <div class="col-md-3"> 31. Szechuan Chicken </div>
+          </div>
+          <hr>
+
+          <h3> Beef </h3>
+          <h4> Small Orders: $6.50 Large Orders: $9.25</h4>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 32. Beef Pepper Steak </div>
+            <div class="col-md-3"> 33. Beef with Broccoli </div>
+            <div class="col-md-3"> 34. Beef with Snow Peas </div>
+            <div class="col-md-3"> 35. Mongolian Beef </div>
+          </div>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 36. Beef with Mixed Vegetables </div>
+            <div class="col-md-3"> 37. Beef with Oyster Sauce </div>
+            <div class="col-md-3"> 38. Kung Pao Beef </div>
+            <div class="col-md-3"> 39. Beef with Garlic Sauce </div>
+          </div>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 40. Hunan Beef </div>
+            <div class="col-md-3"> 41. Szechuan Beef </div>
+          </div>
+          <hr>
+
+          <h3> Seafood </h3>
+          <h4> Small Orders: $6.50 Large Orders: $9.25</h4>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 42. Sweet & Sour Shrimp </div>
+            <div class="col-md-3"> 43. Shrimp with Snow Peas </div>
+            <div class="col-md-3"> 44. Shrimp with Broccoli </div>
+            <div class="col-md-3"> 45. Shrimp with Mixed Vegetables </div>
+          </div>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 46. Shrimp with Cashew Nuts </div>
+            <div class="col-md-3"> 47. Kung Pao Shrimp </div>
+            <div class="col-md-3"> 48. Shrimp with Garlic </div>
+            <div class="col-md-3"> 49. Hunan Shrimp </div>
+          </div>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 50. Scallops with Broccoli </div>
+            <div class="col-md-3"> 51. Scallops with Mixed Vegetables </div>
+            <div class="col-md-3"> 52. Scallops with Garlic Sauce </div>
+          </div>
+          <hr>
+
+          <h3> Lo Mein </h3>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 53. Vegetable, Chicken, or Pork</div>
+            <div class="col-md-3"> $7.00</div>
+            <div class="col-md-3"> 54. Beef or Shrimp </div>
+            <div class="col-md-3"> $7.50 </div>
+            <div class="col-md-3"> 55. Special </div>
+            <div class="col-md-3"> $8.25 </div>
+          </div>
+          <hr>
+
+          <h3> Fried Rice </h3>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 56. Plain </div>
+            <div class="col-md-3"> $3.00 - $4.50 </div>
+            <div class="col-md-3"> 57. Vegetable/Chicken/Pork/Ham </div>
+            <div class="col-md-3"> $3.75 - $5.25 </div>
+            <div class="col-md-3"> 58. Beef or Shrimp </div>
+            <div class="col-md-3"> $4.00-$5.75 </div>
+            <div class="col-md-3"> 59. Special </div>
+            <div class="col-md-3"> $4.25 - $6.25 </div>
+          </div>
+          <hr>
+
+          <h3> Vegetables </h3>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 60. Stir-Fry Broccoli </div>
+            <div class="col-md-3"> $5.00 - $7.25 </div>
+            <div class="col-md-3"> 61. Vegetable Delight</div>
+            <div class="col-md-3"> $5.00 - $7.25 </div>
+            <div class="col-md-3"> 62. Broccoli with Garlic Sauce </div>
+            <div class="col-md-3"> $5.00 - $7.25 </div>
+            <div class="col-md-3"> 63. Bean Curd Mixed Vegetables </div>
+            <div class="col-md-3"> $7.50 </div>
+            <div class="col-md-3"> 64. Bean Curd, Szechuan Style</div>
+            <div class="col-md-3"> $7.50 </div>
+            <div class="col-md-3"> 65. Dry Sauteed String Bean </div>
+            <div class="col-md-3"> $7.50 </div>
+            <div class="col-md-3"> 66. Egg Plant with Garlic Sauce</div>
+            <div class="col-md-3"> $7.50 </div>
+          </div>
+          <hr>
+
+          <h3> Chef's Specialties </h3>
+          <h5> 67. Happy Family - $12.00</h5>
+          <div>Shrimp, scallops, beef and chicken sauteed with baby corn, mushrooms, snow peas, carrots, water chestnut, broccoli in special sauce</div>
+          <h5> 68. Triple Delight - $11.50</h5>
+          <div>Shrimp, chicken and beef with snow peas, baby corn, mushrooms, carrot, broccoli, water chestnuts</div>
+          <h5> 69. Kung Pao Triple - $11.50</h5>
+          <div>Beef, scallops, shrimp with green pepper, onion, carrot, peanuts</div>
+          <h5> 70. Sizzling Beef & Scallops - $11.50</h5>
+          <div>Beef, scallops with baby corn, mushrooms, carrot, broccoli, water chestnuts in chef's special sauce</div>
+          <h5> 71. Double Delight with Mixed Vegetables - $11.50</h5>
+          <div>Shrimp, scallops with baby corn, mushrooms, carrots, broccoli, water chestnuts in chef's special sauce</div>
+          <h5> 72. Pineapple Shrimp - $11.50</h5>
+          <div>Shrimp sauteed with pineapple</div>
+          <h5> 73. General Tso's Chicken - $10.50</h5>
+          <div>Chicken, broccoli with tingling hot sauce</div>
+          <h5> 74. Sesame Chicken - $10.50</h5>
+          <div>Chicken sauteed with broccoli in special sauce</div>
+          <h5> 75. Orange Chicken -$10.50</h5>
+          <div>Chicken sauteed with broccoli, orange peel in special sauce</div>
+          <h5> 76. Amazing Chicken - $10.50</h5>
+          <div>Sliced chicken sauteed with snow peas, mushrooms, water chestnut in special sauce</div>
+          <h5> 77. Fish with Mixed Vegetable - $10.50</h5>
+          <div>Sliced fish with snow peas, mushroom, water chestnut and broccoli</div>
+          <h5> 78. General Tso's Fish - $10.50</h5>
+          <div>Sliced fish sauteed with broccoli</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Order Online Section -->
+<section id="order" class="order-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6" align = "center">
+        <h1>Order Online!</h1>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+          Order Now!
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Order Form</h4>
+              </div>
+              <div class="modal-body">
+                <div class="input-group">
+                 <h4> Name </h4>
+                 <input type="text" class="form-control" placeholder = "Blake Avery">
+               </div>
+               <div class="input-group">
+                 <h4> Address </h4>
+                 <input type="text" class="form-control" placeholder = "1234 Street, City, State, Zip">
+               </div>
+               <div class="input-group">
+                 <h4> Phone Number </h4>
+                 <input type="text" class="form-control" placeholder = "513-123-4567">
+               </div>
+               <div class="input-group">
+                 <h4> Email </h4>
+                 <input type="text" class="form-control" placeholder = "email@domain.com">
+               </div>
+               <div class="input-group">
+                 <h4> Order </h4>
+                 <p> Please enter the number corresponding to one of our 78 menu items and the amount of each item you would like to order.
+                   <form action="action_page.php">
+                    Menu Item #1:
+                    <input type="number" name="quantity" min="1" max="78">
+                    Quantity:
+                    <input type="number" name="quantity" min="1" max="10">
+                    <br>
+                    Menu Item #2:
+                    <input type="number" name="quantity" min="1" max="78">
+                    Quantity:
+                    <input type="number" name="quantity" min="1" max="10">
+                    <br>
+                    Menu Item #3:
+                    <input type="number" name="quantity" min="1" max="78">
+                    Quantity:
+                    <input type="number" name="quantity" min="1" max="10">
+                    <br>
+                    Menu Item #4:
+                    <input type="number" name="quantity" min="1" max="78">
+                    Quantity:
+                    <input type="number" name="quantity" min="1" max="10">
+                    <br>
+                    Menu Item #5:
+                    <input type="number" name="quantity" min="1" max="78">
+                    Quantity:
+                    <input type="number" name="quantity" min="1" max="10">
+                  </form>
+                </div>
+                <div class="input-group">
+                  <h4> Estimated Pickup Time </h4>
+                  <input type="text" class="form-control" placeholder = "6:30 PM">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#thankyou">Place Order</button>
+                </div>
+
+                <!-- Order has been received section -->
+                <div class="modal fade" id="thankyou" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Thank you!</h4>
+                      </div>
+                      <div class="modal-body">
+                       <h4>Your order has been received! A representative will contact you with any questions about your order. See you soon! </h4>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="col-md-6 clearfix" align = "Center">
+      <div class="reservation-widget">
+        <form method="get" id="OT_form" action="http://www.toptable.co.uk/restaurant-search.aspx" target="_blank" class="top-table-widget">
+          <header>
+            <h1>Make a Reservation<h1>
+          </header>
+          <h5> Day </h5>
+          <div class="input-wrapper icon-date">
+            <input name="startDate" id="datepicker" type="text" value="dd/mm/yyyy" autocomplete="off" />
+          </div>
+          <h5> Time </h5>
+          <div class="input-wrapper icon-time">
+            <select name="ResTime" id="ResTime">
+              <option value="11:00" >11:00</option>
+              <option value="11:30" >11:30</option>
+              <option value="12:00" >12:00</option>
+              <option value="12:30" >12:30</option>
+              <option value="13:00" >13:00</option>
+              <option value="13:30" >13:30</option>
+              <option value="14:00" >14:00</option>
+              <option value="14:30" >14:30</option>
+              <option value="15:00" >15:00</option>
+              <option value="15:30" >15:30</option>
+              <option value="16:00" >16:00</option>
+              <option value="16:30" >16:30</option>
+              <option value="17:00" >17:00</option>
+              <option value="17:30" >17:30</option>
+              <option value="18:00" >18:00</option>
+              <option value="18:30" >18:30</option>
+              <option value="19:00" >19:00</option>
+              <option value="19:30" >19:30</option>
+              <option value="20:00" >20:00</option>
+            </select>
+          </div>
+          <h5> Party Size </h5>
+          <div class="input-wrapper icon-party">
+            <select name="PartySize" id="PartySize">
+              <option value="1" >1 person</option>
+              <option value="2" selected="selected">2 people</option>
+              <option value="3" >3 people</option>
+              <option value="4" >4 people</option>
+              <option value="5" >5 people</option>
+              <option value="6" >6 people</option>
+              <option value="7" >7 people</option>
+              <option value="8" >8 people</option>
+              <option value="9" >9 people</option>
+              <option value="10" >10 people</option>
+              <option value="11" >11 people</option>
+              <option value="12" >12 people</option>
+              <option value="13" >13 people</option>
+              <option value="14" >14 people</option>
+              <option value="15" >15 people</option>
+              <option value="16" >16 people</option>
+              <option value="17" >17 people</option>
+              <option value="18" >18 people</option>
+              <option value="19" >19 people</option>
+              <option value="20" >20 people</option>
+            </select>
+          </div>
+          <br>
+
+          <button>Find a Table</button>
+
+          <input type="hidden" name="RestaurantID" id="RestaurantID" value="60217">
+          <input type="hidden" name="rid" id="rid" value="60217">
+          <input type="hidden" name="GeoID" id="GeoID" value="72">
+          <input type="hidden" name="txtDateFormat" id="txtDateFormat" value="dd/mm/yyyy">
+          <input type="hidden" name="RestaurantReferralID" id="RestaurantReferralID" value="60217">
+        </form>
+        <p>*Note: This will take you to an opentable account for fifteen restaraunt as an OpenTable account has not been created for Wong's Wok</p>
       </div>
     </div>
   </div>
 </div>
-  <h4>Monday - Thursday</h4>
-<h4>5:30 - 10:00</h4>
-  <h4>Friday</h4>
-<h4>5:30 - 11:00</h4>
-  <h4>Saturday</h4>
-<h4>5:00 - 11:00</h4>
-  <h4>Sunday</h4>
-<h4>5:00 - 10:00</h4>
-<h4>Asian American food</h4>
-<h4>Reservations recommended</h4>
-<h4>Gift certificates</h4>
+</section>
 
+<!-- Location & Contact Section -->
+<section id="location" class="location-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1>Location & Contact Information</h1>
+        <h3> 565 Melville Ave.</h3>
+        <h3> St. Louis, MO 63130</h3>
+        <h3> Phone: (314)-726-0976</h3>
+        <div class = "caption">
+          <div id="googlemap" class = "map">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+<!-- Social Media Section -->
+<section id="social" class="social-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1>Follow Us!</h1>
+      </div>
+      <div class="row">
+        <a href="https://twitter.com/">
+          <img src = "https://lh3.ggpht.com/lSLM0xhCA1RZOwaQcjhlwmsvaIQYaP3c5qbDKCgLALhydrgExnaSKZdGa8S3YtRuVA=w300" style = "width:300px;height:300px">
+        </a>
+        <a href="https://facebook.com/">
+          <img src = "https://lh5.ggpht.com/_XklY7dK6yGsYt53X15RIp7-tbdjWMwQwl_iUAcW-uSq_8zAprmywdn5DQfBHvxZurs1=w300" style = "width:300px;height:300px">
+        </a>
+        <a href="https://instagram.com/">
+          <img src = "https://pbs.twimg.com/profile_images/1550954462/instagramIcon_400x400.png" style = "width:300px;height:300px">
+        </a>
+        <p> *Note: Links take you to homepages of each social media site. Wong's Wok does not use social media in their operations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Photos Section -->
+<section id="photos" class="photos-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1>Photos!</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <img src = "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-frc3/v/t1.0-1/c33.33.414.414/s160x160/943476_274645426012139_1234521515_n.jpg?oh=f32ab558810d074bbefa4751ee98b445&oe=5549CD72&__gda__=1431316449_800e5d959b2203df0c9d5836591357bf" style = "width:300px;height:300px">
+        </div>
+        <div class = "col-md-4">
+          <img src = "http://physicalculturist.ca/wp-content/uploads/2013/12/stirfry-chinese-people-eating.jpg" style = "width:300px;height:300px">
+        </div>
+        <div class = "col-md-4">
+          <img src = "http://wonderopolis.org/wp-content/uploads/2013/05/955-Food-in-China-896x481.jpg" style = "width:300px;height:300px">
+        </div>
+        <h4>
+          Email us a picture of you enjoying Wong's Wok and we will put you on our site!
+          <a href="mailto:blakeavery@wustl.edu">Email Picture</a>
+        </h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Scrolling Nav JavaScript -->
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/scrolling-nav.js"></script>
+
+</body>
+
 </html>
