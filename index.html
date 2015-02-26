@@ -22,13 +22,13 @@
   <script>
   function initialize() {
     var mapProp = {
-      center:new google.maps.LatLng(38.655495,-90.305494),
+      center:new google.maps.LatLng(37.798462,-122.407021),
       zoom:15,
       mapTypeId:google.maps.MapTypeId.ROADMAP
     };
     var map=new google.maps.Map(document.getElementById("googlemap"),mapProp);
     var marker=new google.maps.Marker({
-      position:new google.maps.LatLng(38.655495,-90.305494),
+      position:new google.maps.LatLng(37.798462,-122.407021),
     });
 
     marker.setMap(map);
@@ -68,7 +68,7 @@
             <a class="page-scroll" href="#menu">Menu</a>
           </li>
           <li>
-            <a class="page-scroll" href="#order">Order or Reserve a Table!</a>
+            <a class="page-scroll" href="#order">Order Online or Reserve a Table!</a>
           </li>
           <li>
             <a class="page-scroll" href="#location">Location & Contact Information</a>
@@ -383,6 +383,8 @@
               <option value="19:00" >19:00</option>
               <option value="19:30" >19:30</option>
               <option value="20:00" >20:00</option>
+              <option value="20:30" >20:30</option>
+              <option value="21:00" >21:00</option>
             </select>
           </div>
           <h5> Party Size </h5>
