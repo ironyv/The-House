@@ -289,7 +289,7 @@
               <div class="modal-body">
                 <div class="input-group">
                  <h4> Name </h4>
-                 <input type="text" class="form-control" placeholder = "Victor Irony">
+                 <input type="text" class="form-control" placeholder = "Blake Avery">
                </div>
                <div class="input-group">
                  <h4> Address </h4>
@@ -305,37 +305,37 @@
                </div>
                <div class="input-group">
                  <h4> Order </h4>
-                 <p> Please enter the number corresponding to one of our 43 menu items and the amount of each item you would like to order.
+                 <p> Please enter the number corresponding to one of our 78 menu items and the amount of each item you would like to order.
                    <form action="action_page.php">
                     Menu Item #1:
-                    <input type="number" name="quantity" min="1" max="43">
+                    <input type="number" name="quantity" min="1" max="78">
                     Quantity:
                     <input type="number" name="quantity" min="1" max="10">
                     <br>
                     Menu Item #2:
-                    <input type="number" name="quantity" min="1" max="43">
+                    <input type="number" name="quantity" min="1" max="78">
                     Quantity:
                     <input type="number" name="quantity" min="1" max="10">
                     <br>
                     Menu Item #3:
-                    <input type="number" name="quantity" min="1" max="43">
+                    <input type="number" name="quantity" min="1" max="78">
                     Quantity:
                     <input type="number" name="quantity" min="1" max="10">
                     <br>
                     Menu Item #4:
-                    <input type="number" name="quantity" min="1" max="43">
+                    <input type="number" name="quantity" min="1" max="78">
                     Quantity:
                     <input type="number" name="quantity" min="1" max="10">
                     <br>
                     Menu Item #5:
-                    <input type="number" name="quantity" min="1" max="43">
+                    <input type="number" name="quantity" min="1" max="78">
                     Quantity:
                     <input type="number" name="quantity" min="1" max="10">
                   </form>
                 </div>
                 <div class="input-group">
                   <h4> Estimated Pickup Time </h4>
-                  <input type="text" class="form-control" placeholder = "12:00 PM">
+                  <input type="text" class="form-control" placeholder = "6:30 PM">
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
@@ -351,7 +351,7 @@
                         <h4 class="modal-title" id="myModalLabel">Thank you!</h4>
                       </div>
                       <div class="modal-body">
-                       <h4>Your order has been received We look forward to seeing you soon! </h4>
+                       <h4>Your order has been received! A representative will contact you with any questions about your order. See you soon! </h4>
                      </div>
                    </div>
                  </div>
@@ -360,7 +360,7 @@
            </div>
          </div>
        </div>
-       
+     </div>
      <div class="col-md-6 clearfix" align = "Center">
       <div class="reservation-widget">
         <form method="get" id="OT_form" action="http://www.toptable.co.uk/restaurant-search.aspx" target="_blank" class="top-table-widget">
@@ -393,8 +393,6 @@
               <option value="19:00" >19:00</option>
               <option value="19:30" >19:30</option>
               <option value="20:00" >20:00</option>
-              <option value="20:30" >20:30</option>
-              <option value="21:00" >21:00</option>
             </select>
           </div>
           <h5> Party Size </h5>
@@ -410,13 +408,29 @@
               <option value="8" >8 people</option>
               <option value="9" >9 people</option>
               <option value="10" >10 people</option>
+              <option value="11" >11 people</option>
+              <option value="12" >12 people</option>
+              <option value="13" >13 people</option>
+              <option value="14" >14 people</option>
+              <option value="15" >15 people</option>
+              <option value="16" >16 people</option>
+              <option value="17" >17 people</option>
+              <option value="18" >18 people</option>
+              <option value="19" >19 people</option>
+              <option value="20" >20 people</option>
             </select>
           </div>
           <br>
 
           <button>Find a Table</button>
+
+          <input type="hidden" name="RestaurantID" id="RestaurantID" value="60217">
+          <input type="hidden" name="rid" id="rid" value="60217">
+          <input type="hidden" name="GeoID" id="GeoID" value="72">
+          <input type="hidden" name="txtDateFormat" id="txtDateFormat" value="dd/mm/yyyy">
+          <input type="hidden" name="RestaurantReferralID" id="RestaurantReferralID" value="60217">
         </form>
-        <p>*Note: There is no OpenTable for The House, but this is where the URL would go</p>
+        <p>*Note: This will take you to an opentable account for fifteen restaraunt as an OpenTable account has not been created for Wong's Wok</p>
       </div>
     </div>
   </div>
