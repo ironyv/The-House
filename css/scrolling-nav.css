@@ -38,6 +38,10 @@ of those sections to manage the look and feel of the site. */
 }
 
 .menu-section {
+ h5{
+  text-decoration: underline;
+  font-weight: bold;
+ }
     padding-top: 100px;
     padding-bottom: 50px;
     text-align: center;
@@ -91,6 +95,7 @@ of those sections to manage the look and feel of the site. */
 img{
     padding: 10px;
 }
+
 
 h5{
     font-weight: bold;
