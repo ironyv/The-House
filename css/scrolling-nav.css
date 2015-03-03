@@ -38,7 +38,7 @@ of those sections to manage the look and feel of the site. */
 }
 
 .menu-section {
- h5{
+ h2{
   text-decoration: underline;
   font-weight: bold;
  }
