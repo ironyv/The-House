@@ -38,10 +38,8 @@ of those sections to manage the look and feel of the site. */
 }
 
 .menu-section {
- h3 {
   text-decoration: underline;
   font-weight: bold;
- }
     padding-top: 100px;
     padding-bottom: 50px;
     text-align: center;
