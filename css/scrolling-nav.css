@@ -33,47 +33,47 @@ of those sections to manage the look and feel of the site. */
 .AboutUs-section {
     padding-top: 100px;
     padding-bottom: 50px;
-    background: #A57EDE;
-    color: #036B24;
+    background: #0CE890;
+    color: black;
 }
 
 .menu-section {
     padding-top: 100px;
     padding-bottom: 50px;
     text-align: center;
-    background: #88DBBE;
-    color: #ED0C0C;
+    background: #E36F10;
+    color: black;
 }
 
 .order-section {
     padding-top: 100px;
     padding-bottom: 50px;
-    background: #A57EDE;
-    color: #036B24;
+    background: #0CE890;
+    color: black;
 }
 
 .location-section {
     padding-top: 100px;
     padding-bottom: 50px;
     text-align: center;
-    background: #88DBBE;
-    color: #ED0C0C;
+    background: #E36F10;
+    color: black;
 }
 
 .social-section {
     padding-top: 100px;
     padding-bottom: 50px;
     text-align: center;
-    background: #A57EDE;
-    color: #036B24;
+    background: #0CE890;
+    color: black;
 }
 
 .photos-section {
     padding-top: 100px;
     padding-bottom: 50px;
     text-align: center;
-    background: #88DBBE;
-    color: #ED0C0C;
+    background: #E36F10;
+    color: #0CE890;
 }
 
 .btn-primary{
