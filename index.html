@@ -272,93 +272,171 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <h1>Order Online</h1>
+        <h1>Order Online!</h1>
 
-<div id="modal_wrapper">
-<div id="modal_window">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+          Order Now!
+        </button>
 
-<p>Complete the form below to place an online order</p>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title" id="myModalLabel">Order Form</h3>
+              </div>
+              <div class="modal-body">
+                <div class="input-group">
+                 <h4> Name </h4>
+                 <input type="text" class="form-control" placeholder = "Blake Avery">
+               </div>
+               <div class="input-group">
+                 <h4> Address </h4>
+                 <input type="text" class="form-control" placeholder = "1234 Street, City, State, Zip">
+               </div>
+               <div class="input-group">
+                 <h4> Phone Number </h4>
+                 <input type="text" class="form-control" placeholder = "513-123-4567">
+               </div>
+               <div class="input-group">
+                 <h4> Email </h4>
+                 <input type="text" class="form-control" placeholder = "email@domain.com">
+               </div>
+               <div class="input-group">
+                 <h4> Order </h4>
+                   <form action="action_page.php">
+                    Menu Item Number:
+                    <input type="number" name="quantity" min="1" max="78">
+                    Quantity:
+                    <input type="number" name="quantity" min="1" max="10">
+                    <br>
+                    Menu Item Number:
+                    <input type="number" name="quantity" min="1" max="78">
+                    Quantity:
+                    <input type="number" name="quantity" min="1" max="10">
+                    <br>
+                    Menu Item Number:
+                    <input type="number" name="quantity" min="1" max="78">
+                    Quantity:
+                    <input type="number" name="quantity" min="1" max="10">
+                    <br>
+                    Menu Item Number:
+                    <input type="number" name="quantity" min="1" max="78">
+                    Quantity:
+                    <input type="number" name="quantity" min="1" max="10">
+                    <br>
+                    Menu Item Number:
+                    <input type="number" name="quantity" min="1" max="78">
+                    Quantity:
+                    <input type="number" name="quantity" min="1" max="10">
+                    <br>
+                  </form>
+                </div>
+                <div class="input-group">
+                  <h4> Estimated Pickup Time </h4>
+                  <input type="text" class="form-control" placeholder = "6:30 PM">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#thankyou">Place Order</button>
+                </div>
 
-<form id="modal_feedback" method="POST" action="#" accept-charset="UTF-8">
-<p><label>Your Name<strong>*</strong><br>
-<input type="text" size="24" name="subject" value=""></label></p>
-<p><label>Email Address<strong>*</strong><br>
-<input type="text" size="24" name="subject" value=""></label></p>
-<p><label>Phone number<strong>*</strong><br>
-<input type="text" size="24" name="subject" value=""></label></p>
-<p><label>Order number<br>
-<input type="text" size="24" name="subject" value=""></label></p>
-<p><label>Quantity<br>
-<input type="text" size="24" name="subject" value=""></label></p>
-<p><label>Comments or special instructions<strong>*</strong><br>
-<textarea required name="message" cols="24" rows="8"></textarea></label></p>
-<p><input type="submit" name="feedbackForm" value="Send Message"></p>
-<p>* Indicates a required field.</p>
-</form>
-
-</div> <!-- #modal_window -->
-</div> <!-- #modal_wrapper -->
-        
+                <!-- Order has been received section -->
+                <div class="modal fade" id="thankyou" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Thank you!</h4>
+                      </div>
+                      <div class="modal-body">
+                       <h4>Your order has been received! A representative will contact you with any questions about your order. See you soon! </h4>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
      <div class="col-md-6 clearfix">
       <div class="reservation-widget">
         <form method="get" id="OT_form" action="http://www.toptable.co.uk/restaurant-search.aspx" target="_blank" class="top-table-widget">
           <header>
             <h1>Make a Reservation<h1>
-          </header>
-          <h5> Day </h5>
-          <div class="input-wrapper icon-date">
-            <input name="startDate" id="datepicker" type="text" value="mm/dd/yyyy" autocomplete="off" />
-          </div>
-          <h5> Time </h5>
-          <div class="input-wrapper icon-time">
-            <select name="ResTime" id="ResTime">
-              <option value="12:00" >12:00</option>
-              <option value="12:30" >12:30</option>
-              <option value="13:00" >13:00</option>
-              <option value="13:30" >13:30</option>
-              <option value="14:00" >14:00</option>
-              <option value="14:30" >14:30</option>
-              <option value="15:00" >15:00</option>
-              <option value="15:30" >15:30</option>
-              <option value="16:00" >16:00</option>
-              <option value="16:30" >16:30</option>
-              <option value="17:00" >17:00</option>
-              <option value="17:30" >17:30</option>
-              <option value="18:00" >18:00</option>
-              <option value="18:30" >18:30</option>
-              <option value="19:00" >19:00</option>
-              <option value="19:30" >19:30</option>
-              <option value="20:00" >20:00</option>
-              <option value="20:30" >20:30</option>
-              <option value="21:00" >21:00</option>
-            </select>
-          </div>
-          <h5> Party Size </h5>
-          <div class="input-wrapper icon-party">
-            <select name="PartySize" id="PartySize">
-              <option value="1" >1 person</option>
-              <option value="2" >2 people</option>
-              <option value="3" >3 people</option>
-              <option value="4" selected="selected">4 people</option>
-              <option value="5" >5 people</option>
-              <option value="6" >6 people</option>
-              <option value="7" >7 people</option>
-              <option value="8" >8 people</option>
-              <option value="9" >9 people</option>
-              <option value="10" >10 people</option>
-            </select>
-          </div>
-          <br>
+            </header>
+            <h5> Day </h5>
+            <div class="input-wrapper icon-date">
+              <input name="startDate" id="datepicker" type="text" value="dd/mm/yyyy" autocomplete="off" />
+            </div>
+            <h5> Time </h5>
+            <div class="input-wrapper icon-time">
+              <select name="ResTime" id="ResTime">
+                <option value="11:00" >11:00</option>
+                <option value="11:30" >11:30</option>
+                <option value="12:00" >12:00</option>
+                <option value="12:30" >12:30</option>
+                <option value="13:00" >13:00</option>
+                <option value="13:30" >13:30</option>
+                <option value="14:00" >14:00</option>
+                <option value="14:30" >14:30</option>
+                <option value="15:00" >15:00</option>
+                <option value="15:30" >15:30</option>
+                <option value="16:00" >16:00</option>
+                <option value="16:30" >16:30</option>
+                <option value="17:00" >17:00</option>
+                <option value="17:30" >17:30</option>
+                <option value="18:00" >18:00</option>
+                <option value="18:30" >18:30</option>
+                <option value="19:00" >19:00</option>
+                <option value="19:30" >19:30</option>
+                <option value="20:00" >20:00</option>
+              </select>
+            </div>
+            <h5> Party Size </h5>
+            <div class="input-wrapper icon-party">
+              <select name="PartySize" id="PartySize">
+                <option value="1" >1 person</option>
+                <option value="2" selected="selected">2 people</option>
+                <option value="3" >3 people</option>
+                <option value="4" >4 people</option>
+                <option value="5" >5 people</option>
+                <option value="6" >6 people</option>
+                <option value="7" >7 people</option>
+                <option value="8" >8 people</option>
+                <option value="9" >9 people</option>
+                <option value="10" >10 people</option>
+                <option value="11" >11 people</option>
+                <option value="12" >12 people</option>
+                <option value="13" >13 people</option>
+                <option value="14" >14 people</option>
+                <option value="15" >15 people</option>
+                <option value="16" >16 people</option>
+                <option value="17" >17 people</option>
+                <option value="18" >18 people</option>
+                <option value="19" >19 people</option>
+                <option value="20" >20 people</option>
+              </select>
+            </div>
+            <br>
 
-          <button>Find a Table</button>
-        </form>
-        <p>*Note: There is currently no OpenTable reservation option for The House.</p>
+            <button>Find a Table</button>
+
+            <input type="hidden" name="RestaurantID" id="RestaurantID" value="60217">
+            <input type="hidden" name="rid" id="rid" value="60217">
+            <input type="hidden" name="GeoID" id="GeoID" value="72">
+            <input type="hidden" name="txtDateFormat" id="txtDateFormat" value="dd/mm/yyyy">
+            <input type="hidden" name="RestaurantReferralID" id="RestaurantReferralID" value="60217">
+          </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
-</div>
 </section>
+
 
 <!-- Location & Contact Section -->
 <section id="location" class="location-section">
